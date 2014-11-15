@@ -1,0 +1,14 @@
+/*
+ Theme Name:   Awesome Hueman
+ Theme URI:    http://canvasisaweso.me
+ Description:  Hueman child theme
+ Author:       Rob Glazebrook
+ Author URI:   http://robglazebrook.com
+ Template:     hueman
+ Version:      1.0.0
+ Tags:         child-theme
+ Text Domain:  awsesome-hueman
+*/
+body {
+  color: red;
+}

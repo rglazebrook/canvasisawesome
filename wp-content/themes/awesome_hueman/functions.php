@@ -9,6 +9,7 @@ function enqueue_awesome_scripts() {
 
     wp_enqueue_script('sketchjs', $ss . '/js/sketch.min.js', array(), false, true);
     wp_enqueue_script('awesome-main', $ss . '/js/main.js', array('sketchjs'), false, true);
+    wp_enqueue_script('bg-canvas', $ss . '/js/bg-points-and-lines.js', array('awesome-main'), false, true);
 }
 
 ?>

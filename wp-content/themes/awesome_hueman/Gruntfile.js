@@ -21,14 +21,28 @@ module.exports = function(grunt) {
           'style.css': 'sass/style.scss'
         }
       }
-    }    
+    },
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'canvasisaweso.me',
+          port: 21,
+          authKey: 'key1'
+        },
+        src: './',
+        dest: '/httpdocs/wp-content/themes/awesome_hueman/',
+        exclusions: ['./**/.DS_Store', './**/Thumbs.db', './tmp', './sass','./.sass-cache','./node_modules']
+      }
+    }   
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-ftp-deploy');
 
   // Default task(s).
   grunt.registerTask('default', ['sass']);
+  grunt.registerTask('deploy', ['sass' ,'ftp-deploy']);
 
 };

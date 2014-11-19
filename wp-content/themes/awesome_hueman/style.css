@@ -22,3 +22,31 @@
   width: 100%;
   height: 100%;
 }
+
+.fa-logo {
+  float: left;
+  margin-top: 24px;
+  color: #fff;
+}
+.fa-logo .fa-angle-left {
+  text-align: right;
+}
+.fa-logo .fa-angle-right {
+  text-align: left;
+}
+@media (max-width: 719px) {
+  .fa-logo {
+    display: block;
+    float: none;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+.site-title {
+  padding-top: 15px;
+}
+
+.site-description {
+  display: none;
+}

@@ -12,4 +12,33 @@ function enqueue_awesome_scripts() {
     wp_enqueue_script('bg-canvas', $ss . '/js/bg-points-and-lines.js', array('awesome-main'), false, true);
 }
 
+
+// Overriding the site title to add a fontawesome-type logo.
+function alx_site_title() {
+
+	$sitename = '<a href="'.home_url('/').'" rel="home"><span class="fa-logo">
+<i class="fa fa-angle-left fa-3x"></i>
+<i class="fa fa-paint-brush fa-3x"></i>
+<i class="fa fa-angle-right fa-3x"></i>
+</span></a>';
+
+	// Text or image?
+	if ( ot_get_option('custom-logo') ) {
+		$logo = '<img src="'.ot_get_option('custom-logo').'" alt="'.get_bloginfo('name').'">';
+	} else {
+		$logo = 'Canvas is <em>Awesome</em>'; //get_bloginfo('name');
+	}
+	
+	$link = '<a href="'.home_url('/').'" rel="home">'.$logo.'</a>';
+	
+	if ( is_front_page() || is_home() ) {
+		$sitename .= '<h1 class="site-title">'.$link.'</h1>'."\n";
+	} else {
+		$sitename .= '<p class="site-title">'.$link.'</p>'."\n";
+	}
+	
+	return $sitename;
+}
+
+
 ?>

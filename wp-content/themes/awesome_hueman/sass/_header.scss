@@ -1,0 +1,27 @@
+// Everything inside #header.
+
+.fa-logo {
+	float:left;
+	margin-top: 24px;
+	color: #fff;
+	.fa-angle-left {
+		text-align: right;
+	}
+	.fa-angle-right {
+		text-align: left;
+	}
+	@media (max-width: 719px) {
+		display: block;
+		float: none;
+		text-align: center;
+		margin-top: 5px;
+	}
+}
+
+.site-title {
+	padding-top: 15px;
+}
+
+.site-description {
+	display: none; // I might want it back later, but not now.
+}

@@ -51,6 +51,22 @@
   display: none;
 }
 
+.post-hover .post-thumbnail {
+  overflow: hidden;
+}
+.post-hover .post-thumbnail img {
+  -webkit-transition: all 1s;
+          transition: all 1s;
+}
+.post-hover:hover .post-thumbnail {
+  opacity: 1;
+}
+.post-hover:hover .post-thumbnail img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .entry pre {
   padding: 0;
   border-top: 0px none;

@@ -22,6 +22,11 @@ module.exports = function(grunt) {
         }
       }
     },
+    "autoprefixer": {
+      "multiple_files": {
+        "src": "*.css"
+      }
+    },
     'ftp-deploy': {
       build: {
         auth: {
@@ -40,9 +45,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass']);
-  grunt.registerTask('deploy', ['sass' ,'ftp-deploy']);
+  grunt.registerTask('default', ['sass','autoprefixer']);
+  grunt.registerTask('deploy', ['sass', 'autoprefixer', 'ftp-deploy']);
 
 };

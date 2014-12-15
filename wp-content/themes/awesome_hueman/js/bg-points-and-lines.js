@@ -3,9 +3,12 @@
 // Note: too many points makes this slow. 40 points requires 800+ distance calculations per frame.
 
 (function($){ 
+
+	// Create the sketch background canvas.
+	var canvasbg = new Sketch.create({ container: $('#canvasbg')[0] });
 	
 	canvasbg.options = {
-		points: 40,
+		points: 50,
 		maxDistance: 100
 	};
 
@@ -40,7 +43,7 @@
 	}
 
 	canvasbg.setup = function () {
-		canvasbg.fillStyle="rgb(0,0,0)";
+		canvasbg.fillStyle="rgb(34,34,34)";
 		for (var i = 0; i < canvasbg.options.points; i++) {
 			points.push(new Point());    
 		}
@@ -67,7 +70,7 @@
 			lineCount = lines.length;
 
 		for (var i = 0; i < lineCount; i++) {
-			canvasbg.strokeStyle = "rgba(0,0,0," + (1 - (lines[i][4] / canvasbg.options.maxDistance)) +")";;
+			canvasbg.strokeStyle = "rgba(34,34,34," + (1 - (lines[i][4] / canvasbg.options.maxDistance)) +")";;
 			canvasbg.beginPath();
 			canvasbg.moveTo(lines[i][0], lines[i][1]);
 			canvasbg.lineTo(lines[i][2], lines[i][3]);

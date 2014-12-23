@@ -17,6 +17,33 @@ function enqueue_awesome_scripts() {
 
 }
 
+// I want link post types.
+function alx_setup() {	
+	// Enable automatic feed links
+	add_theme_support( 'automatic-feed-links' );
+	
+	// Enable featured image
+	add_theme_support( 'post-thumbnails' );
+	
+	// Enable post format support
+	add_theme_support( 'post-formats', array( 'link', 'aside', 'gallery', 'image', 'status' ) );
+	
+	// Declare WooCommerce support
+	add_theme_support( 'woocommerce' );
+	
+	// Thumbnail sizes
+	add_image_size( 'thumb-small', 160, 160, true );
+	add_image_size( 'thumb-medium', 520, 245, true );
+	add_image_size( 'thumb-large', 720, 340, true );
+
+	// Custom menu areas
+	register_nav_menus( array(
+		'topbar' => 'Topbar',
+		'header' => 'Header',
+		'footer' => 'Footer',
+	) );
+}
+
 
 // Overriding the site title to add a fontawesome-type logo.
 function alx_site_title() {

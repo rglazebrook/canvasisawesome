@@ -16,3 +16,35 @@
 		}
 	}
 }
+
+// Post category links.
+// This'll need to be updated as I add categories.
+.post-category {
+	a:first-child {
+		&:before {
+			content: "\f121";
+			margin-left: 1px;
+			margin-right: 6px;
+		}
+		&[href$='/category/link/']:before {
+			@extend %fa-before;
+			content: "\f08e";
+		}
+		&[href$='/category/demo/']:before {
+			@extend %fa-before;
+			content: "\f085";
+		}
+		&[href$='/category/game/']:before {
+			@extend %fa-before;
+			content: "\f11b";
+		}
+		&[href$='/category/library/']:before {
+			@extend %fa-before;
+			content: "\f1c9";
+		}
+		&[href$='/category/tutorial/']:before {
+			@extend %fa-before;
+			content: "\f19d";
+		}		
+	}
+}

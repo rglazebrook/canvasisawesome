@@ -29,17 +29,12 @@
 #subscribe-email {
 	position: relative;
 	&:before {
+		@extend %fa-before;
 		color: #ccc;
 		position: absolute;
 		left: 6px;
 		top: 10px;
 		content:"\f003";
-		display:inline-block;
-		font:normal normal normal 14px/1 FontAwesome;
-		font-size:inherit;
-		text-rendering:auto;
-		-webkit-font-smoothing:antialiased;
-		-moz-osx-font-smoothing:grayscale;
 	}
 	#subscribe-field {
 		width: 100%;

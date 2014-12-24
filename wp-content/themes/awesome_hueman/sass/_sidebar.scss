@@ -1,47 +1,55 @@
-// Edits to the sidebar. 
+// Edits to the sidebar.
 
-// The sidebar ad is 336x280. Our total sidebar width is 340px, but with 30px side padding.
-.sidebar .widget_text {
-	// CURRENTLY the only text widget is the google ad. If this changes, I'll need to rethink this.
-	padding: 0 30px;
-}
-.adsbygoogle {
-	margin-left: -28px;
-}
+.sidebar {
 
-// Basic input styles so that all of my input fields at least look the same (damn you jetpack for not doing this.)
-.widget {
-	input[type=text],
-	input[type=email] {
-		padding-top: 7px 8px;
-		line-height: 20px;
-		background: #fff;
-		border: 2px solid #ddd;
-		display: block;
-		max-width: 100%;
-		box-sizing: border-box;
-		color: #999;
-		font-size: 14px;
+	// The sidebar ad is 336x280. Our total sidebar width is 340px, but with 30px side padding.
+	.widget_text {
+		// CURRENTLY the only text widget is the google ad. If this changes, I'll need to rethink this.
+		padding: 0 30px;
 	}
-}
+	.adsbygoogle {
+		margin-left: -28px;
+	}
 
-// Styling the subscribe widget to look a bit more like the search widget (again, thanks jetpack.)
-#subscribe-email {
-	position: relative;
-	&:before {
-		@extend %fa-before;
-		color: #ccc;
-		position: absolute;
-		left: 6px;
-		top: 10px;
-		content:"\f003";
+	// Basic input styles so that all of my input fields at least look the same (damn you jetpack for not doing this.)
+	.widget {
+		input[type=text],
+		input[type=email] {
+			padding-top: 7px 8px;
+			line-height: 20px;
+			background: #fff;
+			border: 2px solid #ddd;
+			display: block;
+			max-width: 100%;
+			box-sizing: border-box;
+			color: #999;
+			font-size: 14px;
+		}
 	}
-	#subscribe-field {
-		width: 100%;
-		margin-top: 10px;
-		padding: 7px 8px 7px 26px;
+
+	// Styling the subscribe widget to look a bit more like the search widget (again, thanks jetpack.)
+	#subscribe-email {
+		position: relative;
+		&:before {
+			@extend %fa-before;
+			color: #ccc;
+			position: absolute;
+			left: 6px;
+			top: 10px;
+			content:"\f003";
+		}
+		#subscribe-field {
+			width: 100%;
+			margin-top: 10px;
+			padding: 7px 8px 7px 26px;
+		}
 	}
-}
-#subscribe-submit {
-	display: none;
-}
+	#subscribe-submit {
+		display: none;
+	}
+
+
+
+} 
+
+

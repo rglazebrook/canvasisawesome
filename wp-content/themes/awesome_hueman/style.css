@@ -9,7 +9,12 @@
  Tags:         child-theme
  Text Domain:  awsesome-hueman
 */
-.post-category a[href$='/category/link/']:first-child:before, .post-category a[href$='/category/demo/']:first-child:before, .post-category a[href$='/category/game/']:first-child:before, .post-category a[href$='/category/library/']:first-child:before, .post-category a[href$='/category/tutorial/']:first-child:before, #subscribe-email:before {
+.sidebar #subscribe-email:before, .post-category a[href$='/category/link/']:first-child:before,
+.widget_categories .cat-item a[href$='/category/link/']:first-child:before, .post-category a[href$='/category/demo/']:first-child:before,
+.widget_categories .cat-item a[href$='/category/demo/']:first-child:before, .post-category a[href$='/category/game/']:first-child:before,
+.widget_categories .cat-item a[href$='/category/game/']:first-child:before, .post-category a[href$='/category/library/']:first-child:before,
+.widget_categories .cat-item a[href$='/category/library/']:first-child:before, .post-category a[href$='/category/tutorial/']:first-child:before,
+.widget_categories .cat-item a[href$='/category/tutorial/']:first-child:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -76,27 +81,6 @@
           transform: scale(1.1);
 }
 
-.post-category a:first-child:before {
-  content: "\f121";
-  margin-left: 1px;
-  margin-right: 6px;
-}
-.post-category a:first-child[href$='/category/link/']:before {
-  content: "\f08e";
-}
-.post-category a:first-child[href$='/category/demo/']:before {
-  content: "\f085";
-}
-.post-category a:first-child[href$='/category/game/']:before {
-  content: "\f11b";
-}
-.post-category a:first-child[href$='/category/library/']:before {
-  content: "\f1c9";
-}
-.post-category a:first-child[href$='/category/tutorial/']:before {
-  content: "\f19d";
-}
-
 .entry pre {
   padding: 0;
   border-top: 0px none;
@@ -113,13 +97,11 @@
 .sidebar .widget_text {
   padding: 0 30px;
 }
-
-.adsbygoogle {
+.sidebar .adsbygoogle {
   margin-left: -28px;
 }
-
-.widget input[type=text],
-.widget input[type=email] {
+.sidebar .widget input[type=text],
+.sidebar .widget input[type=email] {
   padding-top: 7px 8px;
   line-height: 20px;
   background: #fff;
@@ -130,23 +112,48 @@
   color: #999;
   font-size: 14px;
 }
-
-#subscribe-email {
+.sidebar #subscribe-email {
   position: relative;
 }
-#subscribe-email:before {
+.sidebar #subscribe-email:before {
   color: #ccc;
   position: absolute;
   left: 6px;
   top: 10px;
   content: "\f003";
 }
-#subscribe-email #subscribe-field {
+.sidebar #subscribe-email #subscribe-field {
   width: 100%;
   margin-top: 10px;
   padding: 7px 8px 7px 26px;
 }
-
-#subscribe-submit {
+.sidebar #subscribe-submit {
   display: none;
+}
+
+.post-category a:first-child:before,
+.widget_categories .cat-item a:first-child:before {
+  content: "\f121";
+  margin-left: 1px;
+  margin-right: 6px;
+}
+.post-category a:first-child[href$='/category/link/']:before,
+.widget_categories .cat-item a:first-child[href$='/category/link/']:before {
+  content: "\f08e";
+}
+.post-category a:first-child[href$='/category/demo/']:before,
+.widget_categories .cat-item a:first-child[href$='/category/demo/']:before {
+  content: "\f085";
+}
+.post-category a:first-child[href$='/category/game/']:before,
+.widget_categories .cat-item a:first-child[href$='/category/game/']:before {
+  content: "\f11b";
+}
+.post-category a:first-child[href$='/category/library/']:before,
+.widget_categories .cat-item a:first-child[href$='/category/library/']:before {
+  content: "\f1c9";
+}
+.post-category a:first-child[href$='/category/tutorial/']:before,
+.widget_categories .cat-item a:first-child[href$='/category/tutorial/']:before {
+  content: "\f19d";
 }
